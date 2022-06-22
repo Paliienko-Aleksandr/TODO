@@ -1,28 +1,40 @@
+// function setTitle(text){
+//    let a = document.querySelector('.title')
+//  a.textContent = text
+//   console.log(a)
+//   return text
+// }
+// setTitle('text')
 
-  function getTitle(){
-  const titleText = document.querySelector('.title');
-  console.log(titleText.textContent);
-  return titleText.textContent;
+
+export function getTitle(){
+  let text = document.querySelector('.title')
+text = text.textContent
+console.log(text)
+return text
 }
 getTitle()
 
- function getDescription() {
-  const innerText = document.querySelector('.about');
-  // console.log(innerText.innerText);
-  return innerText.innerText;
+export function getDescription(){
+  let text = document.querySelector('.about');
+  text = text.innerText;
+  console.log(text)
+  return  text
 }
- getDescription()
+getDescription()
 
-  function getPlans(){
-   const plansText = document.querySelector('.plans');
-  //  console.log(plansText.innerHTML);
-   return plansText.innerHTML;
- }
- getPlans()
+export function getPlans(){
+  let text = document.querySelector('.plans');
+  text = text.innerHTML;
+  console.log(text)
+  return  text
+}
+getPlans()
 
-  function getGoal(){
-   const goalText = document.querySelector('.goal');
-  //  console.log(goalText.outerHTML);
-   return goalText.outerHTML;
- }
- getGoal()
+export function getGoal(){
+  let text = document.querySelector('.goal');
+  text = text.outerHTML;
+  console.log(text)
+  return  text
+}
+getGoal()
