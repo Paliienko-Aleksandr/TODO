@@ -1,5 +1,3 @@
-usestrict
-
 
 export  function getTitle(){
   const titleText = document.querySelector('.title');
