@@ -9,7 +9,7 @@
 
 export function getTitle(){
   let text = document.querySelector('.title')
-text = text.textContent
+text.textContent = text
 console.log(text)
 return text
 }
