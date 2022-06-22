@@ -1,7 +1,7 @@
-export function getTitle(){
-  const titleText = document.querySelector('.title').textContent;
-  console.log(titleText)
-  return titleText
+ export function getTitle(){
+  const titleText = document.querySelector('.title');
+  console.log(titleText.textContent)
+  return titleText.textContent
 }
 getTitle()
 
