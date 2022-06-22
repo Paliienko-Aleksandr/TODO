@@ -4,9 +4,10 @@
   console.dir(elementsList)
   
 }
-
+getItemsList()
 
  function getItemsArray(){
   const elementsArray = document.querySelectorAll('.tool');
   console.dir(Array.from(elementsArray))
 }
+getItemsArray()
