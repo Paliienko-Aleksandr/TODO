@@ -1,3 +1,6 @@
+usestrict
+
+
 export  function getTitle(){
   const titleText = document.querySelector('.title');
   console.log(titleText.textContent);
