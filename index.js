@@ -1,13 +1,13 @@
-export function getTitleElement(){
-  const titleElem = document.querySelector('.title')
-  console.dir(titleElem)
-  return titleElem
+export function getItemsList(){
+  const elementsList = document.querySelectorAll('.technology')
+  console.dir(elementsList)
+  return elementsList
 }
-getTitleElement()
+getItemsList()
 
-export function getInputElement(){
-  const inputElem = document.querySelector('input');
-  console.dir(inputElem)
-  return inputElem
+  export function getItemsArray(){
+  const elementsArray = document.querySelectorAll('.tool');
+  console.dir(Array.from(elementsArray))
+  return Array.from(elementsArray)
 }
-getInputElement()
+getItemsArray()
