@@ -8,10 +8,10 @@
 
 
 export function getTitle(){
-  let text = document.querySelector('.title')
+  let text = document.querySelector('.title').textContent
 
 console.log(text)
-return text.textContent
+return text
 }
 getTitle()
 
