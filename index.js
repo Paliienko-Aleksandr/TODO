@@ -8,12 +8,12 @@
 
 
 export function getTitle(){
-  let text = document.querySelector('.title').textContent
-
+  let text = document.querySelector('.title')
+text = text.textContent
 console.log(text)
 return text
 }
-getTitle()
+
 
 export function getDescription(){
   let text = document.querySelector('.about');
@@ -21,7 +21,7 @@ export function getDescription(){
   console.log(text)
   return  text
 }
-getDescription()
+
 
 export function getPlans(){
   let text = document.querySelector('.plans');
@@ -29,7 +29,7 @@ export function getPlans(){
   console.log(text)
   return  text
 }
-getPlans()
+
 
 export function getGoal(){
   let text = document.querySelector('.goal');
@@ -37,4 +37,3 @@ export function getGoal(){
   console.log(text)
   return  text
 }
-getGoal()
