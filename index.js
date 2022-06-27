@@ -1,39 +1,27 @@
-// function setTitle(text){
-//    let a = document.querySelector('.title')
-//  a.textContent = text
-//   console.log(a)
-//   return text
-// }
-// setTitle('text')
+const divElem = document.querySelector('.rect_div')
+const pElem = document.querySelector('.rect_p')
+const spanElem = document.querySelector('.rect_span')
 
+const logTarget = (text, color) => {
+  const eventsListItem = document.querySelector('.events-list');
 
-export function getTitle(){
-  let text = document.querySelector('.title')
-text = text.textContent
-console.log(text)
-return text
+  eventsListItem.innerHTML += `<span style = "color: ${color}; margin-left: 8px">${text}</span>`
 }
 
 
-export function getDescription(){
-  let text = document.querySelector('.about');
-  text = text.innerText;
-  console.log(text)
-  return  text
-}
+const logGreenDiv = logTarget.bind(null, 'DIV', 'green')
+const logGreenP = logTarget.bind(null, 'P', 'green')
+const logGreenSpan = logTarget.bind(null, 'SPAN', 'green')
 
+const logGreyDiv = logTarget.bind(null, 'DIV', 'grey')
+const logGreyP = logTarget.bind(null, 'P', 'grey')
+const logGreySpan = logTarget.bind(null, 'SPAN', 'grey')
 
-export function getPlans(){
-  let text = document.querySelector('.plans');
-  text = text.innerHTML;
-  console.log(text)
-  return  text
-}
+divElem.addEventListener('click', logGreyDiv, true)
+divElem.addEventListener('click', logGreenDiv)
 
+pElem.addEventListener('click', logGreyP, true)
+pElem.addEventListener('click', logGreenP)
 
-export function getGoal(){
-  let text = document.querySelector('.goal');
-  text = text.outerHTML;
-  console.log(text)
-  return  text
-}
+spanElem.addEventListener('click', logGreySpan, true)
+spanElem.addEventListener('click', logGreySpan)
