@@ -50,7 +50,14 @@ const attach = () =>{
 
 attachHandlers.addEventListener('click', attach)
 
-// const remove = () =>{
-//   removeHandleds.removeEventListener('click', sum);
-// }
-// removeHandleds.addEventListener('click', remove)
+const remove = () =>{
+  divElem.removeEventListener('click', logGreyDiv, true)
+  divElem.removeEventListener('click', logGreenDiv)
+  
+  pElem.removeEventListener('click', logGreyP, true)
+  pElem.removeEventListener('click', logGreenP)
+  
+  spanElem.removeEventListener('click', logGreySpan, true)
+  spanElem.removeEventListener('click', logGreenSpan)
+}
+removeHandleds.addEventListener('click', remove)
