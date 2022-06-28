@@ -31,13 +31,15 @@ spanElem.addEventListener('click', logGreenSpan)
 
 
 const clear = () =>{
-  document.querySelector('.events-list').innerText = '';
+  document.querySelector('.events-list').innerHTML = '';
 }
 clearBtn.addEventListener('click', clear)
 
 
 
 const remove = () =>{
-  removeHandleds.removeEventListener('click', logTarget)
+  removeHandleds.removeEventListener('click', );
+ 
+
 }
 removeHandleds.addEventListener('click', remove)
