@@ -2,7 +2,6 @@ const divElem = document.querySelector('.rect_div')
 const pElem = document.querySelector('.rect_p')
 const spanElem = document.querySelector('.rect_span')
 const clearBtn = document.querySelector('.clear-btn')
-const onBtn = document.querySelector('.attach-handlers-btn')
 const removeHandleds = document.querySelector('.remove-handlers-btn')
 
 
@@ -32,13 +31,13 @@ spanElem.addEventListener('click', logGreenSpan)
 
 
 const clear = () =>{
-  document.querySelector('.events-list').innerText = ''
+  document.querySelector('.events-list').innerText = '';
 }
 clearBtn.addEventListener('click', clear)
 
 
 
 const remove = () =>{
-  removeHandleds.removeEventListener('click', )
+  removeHandleds.removeEventListener('click', logTarget)
 }
 removeHandleds.addEventListener('click', remove)
