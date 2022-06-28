@@ -3,6 +3,7 @@ const pElem = document.querySelector('.rect_p')
 const spanElem = document.querySelector('.rect_span')
 const clearBtn = document.querySelector('.clear-btn')
 const removeHandleds = document.querySelector('.remove-handlers-btn')
+const attachHandlers = document.querySelector('.attach-handlers-btn')
 
 
 const logTarget = (text, color) => {
@@ -19,14 +20,14 @@ const logGreyDiv = logTarget.bind(null, 'DIV', 'grey')
 const logGreyP = logTarget.bind(null, 'P', 'grey')
 const logGreySpan = logTarget.bind(null, 'SPAN', 'grey')
 
-divElem.addEventListener('click', logGreyDiv, true)
-divElem.addEventListener('click', logGreenDiv)
+// divElem.addEventListener('click', logGreyDiv, true)
+// divElem.addEventListener('click', logGreenDiv)
 
-pElem.addEventListener('click', logGreyP, true)
-pElem.addEventListener('click', logGreenP)
+// pElem.addEventListener('click', logGreyP, true)
+// pElem.addEventListener('click', logGreenP)
 
-spanElem.addEventListener('click', logGreySpan, true)
-spanElem.addEventListener('click', logGreenSpan)
+// spanElem.addEventListener('click', logGreySpan, true)
+// spanElem.addEventListener('click', logGreenSpan)
 
 
 
@@ -36,10 +37,20 @@ const clear = () =>{
 clearBtn.addEventListener('click', clear)
 
 
-
-const remove = () =>{
-  removeHandleds.removeEventListener('click', );
- 
-
+const attach = () =>{
+  divElem.addEventListener('click', logGreyDiv, true)
+  divElem.addEventListener('click', logGreenDiv)
+  
+  pElem.addEventListener('click', logGreyP, true)
+  pElem.addEventListener('click', logGreenP)
+  
+  spanElem.addEventListener('click', logGreySpan, true)
+  spanElem.addEventListener('click', logGreenSpan)
 }
-removeHandleds.addEventListener('click', remove)
+
+attachHandlers.addEventListener('click', attach)
+
+// const remove = () =>{
+//   removeHandleds.removeEventListener('click', sum);
+// }
+// removeHandleds.addEventListener('click', remove)
