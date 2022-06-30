@@ -34,6 +34,9 @@ const tasks = [
    const inputElem = document.querySelector('.task-input')
 
    const createNewData = event =>{
+     if (inputElem.value === ''){
+       return
+     }
     let obj = {
       text: `${inputElem.value}`,
       done: false,
