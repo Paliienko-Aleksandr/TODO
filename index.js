@@ -1,5 +1,5 @@
 const tasks = [
-   { text: 'Buy milk', done: false },
+   { text: 'Buy milk', done: false , id: 1},
    { text: 'Pick up Tom from airport', done: false },
    { text: 'Visit party', done: false },
    { text: 'Visit doctor', done: true },
@@ -9,6 +9,7 @@ const tasks = [
  const listElem = document.querySelector('.list');
  
  const renderTasks = tasksList => {
+  listElem.innerHTML = ''
    const tasksElems = tasksList
      .sort((a, b) => a.done - b.done)
      .map(({ text, done }) => {
@@ -32,7 +33,7 @@ const tasks = [
    const buttonElem = document.querySelector('.create-task-btn');
    const inputElem = document.querySelector('.task-input')
 
-   const createNewData = () =>{
+   const createNewData = event =>{
     let obj = {
       text: `${inputElem.value}`,
       done: false,
