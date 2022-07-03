@@ -52,8 +52,8 @@ const tasks = [
      if( item.id === +(event.target.dataset.id)){
       item.done = true
      }
-     
     })
+    renderTasks(tasks)
   }
   
     const checkboxElem = Array.from(document.querySelectorAll('.list__item-checkbox'))
