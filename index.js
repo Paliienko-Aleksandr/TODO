@@ -10,7 +10,8 @@ const tasks = [
  const checkboxElem = document.querySelector('.list__item-checkbox')
  
  const renderTasks = tasksList => {
-  listElem.innerHTML = ''
+  listElem.innerHTML = '';
+  listElem.textContent = '';
    const tasksElems = tasksList
      .sort((a, b) => a.done - b.done)
      .map(({ text, done, id}) => {
@@ -27,9 +28,9 @@ const tasks = [
        listItemElem.append(checkbox, text);
        return listItemElem;
      });
- 
+     
    listElem.append(...tasksElems);
-
+   
    const buttonElem = document.querySelector('.create-task-btn');
    const inputElem = document.querySelector('.task-input')
   
@@ -48,6 +49,7 @@ const tasks = [
     buttonElem.addEventListener('click', createNewData);
 
   const checkboxChangeStatus = (event) =>{
+    
     tasksList.map((item) =>{
      if( item.id === +(event.target.dataset.id)){
       item.done = true
