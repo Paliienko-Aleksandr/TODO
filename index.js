@@ -11,7 +11,6 @@ const tasks = [
  
  const renderTasks = tasksList => {
   listElem.innerHTML = '';
-  listElem.textContent = '';
    const tasksElems = tasksList
      .sort((a, b) => a.done - b.done)
      .map(({ text, done, id}) => {
@@ -25,6 +24,7 @@ const tasks = [
        if (done) {
          listItemElem.classList.add('list__item_done');
        }
+
        listItemElem.append(checkbox, text);
        return listItemElem;
      });
@@ -44,23 +44,23 @@ const tasks = [
       id: Math.random(1)*10000/10,
     }
     tasksList.push(obj)
+    inputElem.value = '';
     renderTasks(tasks)
     }
     buttonElem.addEventListener('click', createNewData);
 
   const checkboxChangeStatus = (event) =>{
-    
     tasksList.map((item) =>{
      if( item.id === +(event.target.dataset.id)){
       item.done = true
      }
+     renderTasks(tasks)
     })
-    renderTasks(tasks)
   }
   
     const checkboxElem = Array.from(document.querySelectorAll('.list__item-checkbox'))
     checkboxElem.map((item) => {
-      item.addEventListener('click', checkboxChangeStatus)
+      item.addEventListener('click', checkboxChangeStatus);
     })
 };
  renderTasks(tasks);
