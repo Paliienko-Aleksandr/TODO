@@ -22,9 +22,8 @@ const tasks = [
        checkbox.checked = done;
        checkbox.classList.add('list__item-checkbox');
        if (done) {
-         listItemElem.classList.add('list__item_done');
-       }
-
+        listItemElem.classList.add('list__item_done');
+      }
        listItemElem.append(checkbox, text);
        return listItemElem;
      });
@@ -49,18 +48,24 @@ const tasks = [
     }
     buttonElem.addEventListener('click', createNewData);
 
-  const checkboxChangeStatus = (event) =>{
-    tasksList.map((item) =>{
-     if( item.id === +(event.target.dataset.id)){
-      item.done = true
-     }
-     renderTasks(tasks)
-    })
-  }
+   
+      const checkboxChangeStatus = (event) =>{
+       let tasksElem = tasks.find(({id}) => id === +(event.target.dataset.id))
+       if (tasksElem.done === true){
+         tasksElem.done = false
+       }else{
+        tasksElem.done = true
+       }
+        
+       console.log(tasksElem)
+       renderTasks(tasks)
+      }
+     
   
     const checkboxElem = Array.from(document.querySelectorAll('.list__item-checkbox'))
     checkboxElem.map((item) => {
       item.addEventListener('click', checkboxChangeStatus);
     })
+    
 };
  renderTasks(tasks);
